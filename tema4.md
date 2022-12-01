@@ -51,11 +51,11 @@ body{
 
 ## Dekoratif ikonu değiştirme
 ```css
-.decorative-icon.fa-star:before {
+.decorative-icon:before {
     content: "";
-    background: url("https://img.kod8.in/889/-1122022-112754.png");
-    width: 24px;
-    height: 24px;
+    background: url("https://img.kod8.in/889/9556-1122022-134932.png");
+    width: 36px;
+    height: 36px;
     display: block;
     background-size: contain;
     background-repeat: no-repeat;
