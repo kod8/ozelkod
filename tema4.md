@@ -9,6 +9,8 @@ body {
      --radius:0;
     --fancybox-accent-color:var(--main)!important;
     --shadow:3px 3px 20px 0 rgb(40 40 40 / 8%);
+    --aspect-ratio:calc(16 / 9);
+    --gallery-aspect-ratio:calc(1);
     
      --hue: 46;
     --white: hsl(0, 0%, 95%);
