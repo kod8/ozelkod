@@ -26,7 +26,7 @@ body {
 ```
 
 
-# Belli bir sayfada ara alandaki resmi değiştirme
+## Belli bir sayfada ara alandaki resmi değiştirme
 ```css
 #araalan[data-baslik="Paket Servis"]{
     background-image:url("https://img.kod8.in/641/kod829845.jpg")!important;
