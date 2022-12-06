@@ -177,3 +177,59 @@ feed.run();
 
 ```
 
+
+## Stillendirilmiş Blok Örnekleri
+### Anavitrin yapılan sayfanın alt sayfaları için kart stili 1
+
+```css
+.anaVitrinler .anaVitrinItem .altSayfalar {
+    align-items:unset;
+    margin-top: 3em;
+    --shadow:none;
+
+}
+
+.anaVitrinler .anaVitrinItem .altSayfalar .altSayfa {
+    padding-right: 0;
+    border-radius: var(--radius);
+    margin-bottom:3em;
+    border: 1px solid var(--main);
+
+}
+    
+.anaVitrinler .anaVitrinItem .altSayfalar a {
+    flex-direction: column;
+} 
+
+
+.anaVitrinler .anaVitrinItem .altSayfalar a img {
+    width: 90%;
+    height: auto;
+    border-radius: var(--radius);
+    margin: -2em 1em 0 5%;
+    transition:all 300ms ease;
+}
+
+.anaVitrinler .anaVitrinItem .altSayfalar .altSayfa:hover img {
+    margin: -2em 1em 1.25em 10%;
+    width: 80%;
+}
+
+.anaVitrinler .anaVitrinItem .altSayfalar a div .baslik {
+    font-size: 1.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+    .anaVitrinler .anaVitrinItem .altSayfalar a .spot {
+    display: block;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    color: var(--light);
+    font-size: 1em;
+    font-style: italic;
+}
+```
+
