@@ -100,7 +100,7 @@ function createInstagramFeedElement(){
 }
 
 function renderInstagramFeed(){
-var igToken = "IGQVJXRkxwN2JOT09jMGE3VlNHQjdEOEQ1N010OWIxNDJMbHNkcGdLYjhXSV93NVpiVXJPODMtb2RPVVNhSFBmbzdQU3FjczFmamJkNUNFZAHd4aDNIVjB2LXp4R19YRk5DaGNBd0t3Wm13MlhxaU9pLQZDZD"
+var igToken = "IGTOKEN"
 	if(document.querySelector("#instafeed")){
 		var feed = new Instafeed({
 			accessToken: igToken,
