@@ -83,9 +83,13 @@ function createInstagramFeedElement(){
      <div class="container">
     <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-            <div class="heading text-center mb-50">
+             <div class="heading text-center mb-50">
               <i class="fa fa-star decorative-icon" aria-hidden="true"></i>
-              <a href="https://www.instagram.com/gustorestaurantcafe/" title="İnstagram Adresimiz" target="_blank"><h2 class="heading__title">Instagram'da Takip Et</h2></a>
+              <a href="https://www.instagram.com/humhumbees/" title="İnstagram Adresimiz" target="_blank" rel="nofollow"><h2 class="heading__title">Instagram'da Takip Et</h2>
+<a href="https://www.instagram.com/humhumbees/" class="navbar__action-btn navbar__action-btn-reserve btn btn__primary" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i>humhumbees
+</a></a>
+            
+            </div>
             
             </div>
           </div>
