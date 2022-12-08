@@ -113,7 +113,7 @@ var igToken = "IGTOKEN"
 			},
 			"template":`
 			
-<div class="instaImageItem">
+<div class="instaImageItem aspect-box">
 
 <a href="{{link}}" title="Instagram Sayfamız" target="_blank" rel="nofollow" >
 			<img src="{{image}}" alt="Instagram Sayfamız">
@@ -139,6 +139,7 @@ feed.run();
 
 .instaImageItem {
     position: relative;
+    --aspect-ratio: 1;
 }
 
 .instaImageItem a span{
