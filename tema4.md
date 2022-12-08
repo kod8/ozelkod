@@ -113,9 +113,9 @@ var igToken = "IGTOKEN"
 			},
 			"template":`
 			
-<div class="instaImageItem aspect-box">
+<div class="instaImageItem">
 
-<a href="{{link}}" title="Instagram Sayfamız" target="_blank" rel="nofollow" >
+<a href="{{link}}" title="Instagram Sayfamız" target="_blank" rel="nofollow" class="aspect-box d-block" >
 			<img src="{{image}}" alt="Instagram Sayfamız">
 			<span class="btn">Görüntüle</span>
 </a>
