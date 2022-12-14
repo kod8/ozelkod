@@ -15,11 +15,11 @@ body {
 
 ## Instagram Bloğu ekleme
 ```html
-	<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
 
 <script>
 AddOnLoadEvent(function(){
-    if(document.querySelector(".bizdenhaberler")){
+    if(document.querySelector(".emlaklar")){
         createInstagramFeedElement();
         renderInstagramFeed();
     }
@@ -29,31 +29,25 @@ AddOnLoadEvent(function(){
 function createInstagramFeedElement(){
     var instaFeedContainer=document.createElement("div")
     instaFeedContainer.innerHTML=`
-     <div class="container">
-    <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-             <div class="heading text-center mb-50">
-              <i class="fa fa-star decorative-icon" aria-hidden="true"></i>
-              <a href="https://www.instagram.com/humhumbees/" title="İnstagram Adresimiz" target="_blank" rel="nofollow"><h2 class="heading__title">Instagram'da Takip Et</h2>
-<a href="https://www.instagram.com/humhumbees/" class="navbar__action-btn navbar__action-btn-reserve btn btn__primary" target="_blank" rel="nofollow"><i class="fa fa-instagram"></i>humhumbees
-</a></a>
-            
-            </div>
-            
-            </div>
-          </div>
-        </div>
-        </div>
-    <div class="col-12 mb-5" id="instafeed">
+ 
     
-    </div>
+    
+    <section class="blog-wrap-layout1 bg-accent100 anasayfadainstagram anasayfadafotogaleri mb-5">
+		<div class="container">
+			<div class="container section-heading heading-dark text-center heading-layout1">
+				<a href="https://www.instagram.com/realtyworldduzce/" title="İnstagram Adresimiz"><h2 class="display-4 pb-3">Instagram'da Takip Et</h2></a>
+			</div>
+			<section id="instafeed">
+    </section>
+     </div>
+      </section>
     `
 
-    document.querySelector(".bizdenhaberler").insertAdjacentElement('afterend', instaFeedContainer)
+    document.querySelector(".emlaklar").insertAdjacentElement('afterend', instaFeedContainer)
 }
 
 function renderInstagramFeed(){
-var igToken = "IGTOKEN"
+var igToken = "IGQVJYLUZAqXzZAyaEctQzdtcmtxd2h1eXBQMDNkUk9VUFlpRWxPOHBsTS1TUGNPMlMtR0dWQXVvdjZAOZAkRqcFJPUlJfYnJXZAWJTMjFDOTB6SGpSa0wwb3dYSHg5d1lMZAllhVUEzMjIzY01iY2lxa0xxdQZDZD"
 	if(document.querySelector("#instafeed")){
 		var feed = new Instafeed({
 			accessToken: igToken,
@@ -69,7 +63,7 @@ var igToken = "IGTOKEN"
 <div class="instaImageItem">
 
 <a href="{{link}}" title="Instagram Sayfamız" target="_blank" rel="nofollow" class="aspect-box d-block" >
-			<img src="{{image}}" alt="Instagram Sayfamız">
+			<img src="{{image}}" alt="Instagram Sayfamız" class="img-fluid">
 			<span class="btn">Görüntüle</span>
 </a>
 
