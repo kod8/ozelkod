@@ -47,7 +47,7 @@ function createInstagramFeedElement(){
 }
 
 function renderInstagramFeed(){
-var igToken = "IGQVJYLUZAqXzZAyaEctQzdtcmtxd2h1eXBQMDNkUk9VUFlpRWxPOHBsTS1TUGNPMlMtR0dWQXVvdjZAOZAkRqcFJPUlJfYnJXZAWJTMjFDOTB6SGpSa0wwb3dYSHg5d1lMZAllhVUEzMjIzY01iY2lxa0xxdQZDZD"
+var igToken = "IGTOKEN"
 	if(document.querySelector("#instafeed")){
 		var feed = new Instafeed({
 			accessToken: igToken,
