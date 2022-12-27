@@ -168,6 +168,91 @@ feed.run();
 </style>
 ```
 
+## Anavitrin alt sayfaları kart stili (dikey)
+```css
+
+  /*Anavitrin alt sayfalar stili*/
+.anaVitrinler .anaVitrinItem .altSayfalar {
+    align-items:unset;
+}
+
+.anaVitrinler .anaVitrinItem .altSayfalar .altSayfa {
+    padding-right: 0;
+    border-radius: 1.5em;
+    margin-bottom:2em
+}
+    
+.anaVitrinler .anaVitrinItem .altSayfalar a {
+    flex-direction: column;
+} 
+
+.anaVitrinler .anaVitrinItem .altSayfalar i {
+    flex-grow:2; 
+    order: 1;
+    transform: rotate(90deg);
+    line-height: 0;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    width:2em;
+    height: 2em;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:1em;
+    margin-top: -1em
+}
+
+.anaVitrinler .anaVitrinItem .altSayfalar a img {
+    width: 90%;
+    height: auto;
+    border-radius: 1em;
+    margin: -2em 1em 2em 5%;
+    transition:all 300ms ease;
+}
+
+.anaVitrinler .anaVitrinItem .altSayfalar .altSayfa:hover img {
+    margin: -2em 1em 3em 10%;
+    width: 80%;
+}
+
+.anaVitrinler .anaVitrinItem .altSayfalar a div .baslik {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+    .anaVitrinler .anaVitrinItem .altSayfalar a .spot {
+    display: block;
+    width: 100%;
+    font-size: 1.2em;
+        margin: 0;
+        text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+.anaVitrinler .anaVitrinItem .altSayfalar a .spot {
+    display: none;
+}
+    
+    .anaVitrinler .anaVitrinItem .altSayfalar a img {
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+}
+
+.anaVitrinler .anaVitrinItem .altSayfalar .altSayfa:hover img {
+        margin: 0;
+    width: 100%;
+}
+    
+    .anaVitrinler .anaVitrinItem .altSayfalar .altSayfa {
+    overflow: :hidden;
+}
+  .anaVitrinler .anaVitrinItem .altSayfalar .altSayfa {flex: 0 1 100%;} 
+}
+  /*/ anavitrin alt sayfalar stili*/
+```
+
 
 
 
