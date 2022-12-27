@@ -67,3 +67,108 @@ document.querySelector(".fixedButtons").appendChild(telefonButton)
 })
 </script>
 ```
+## Instagram bloğu ekleme
+```html
+<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+<script>
+AddOnLoadEvent(function(){
+    if(document.querySelector(".anaVitrinler")){
+        createInstagramFeedElement();
+        renderInstagramFeed();
+    }
+})
+
+function createInstagramFeedElement(){
+    var instaFeedContainer=document.createElement("div")
+    instaFeedContainer.innerHTML=`
+    <div class="section-heading text-center text-white heading-light heading-layout1">
+		<h2>Sosyal Medyada Biz <i class="fab fa-instagram"></i></h2>
+	</div>
+        <div class="col-12 mb-5" id="instafeed">
+    </div>
+    `
+    instaFeedContainer.classList.add("w-100")
+    instaFeedContainer.classList.add("p-5")
+    instaFeedContainer.classList.add("my-3")
+    instaFeedContainer.classList.add("container-fluid")
+    instaFeedContainer.style.background="var(--dark)"
+    document.querySelector(".anaVitrinler").insertAdjacentElement('afterend', instaFeedContainer)
+}
+
+function renderInstagramFeed(){
+var igToken = "IGTOKEN"
+	if(document.querySelector("#instafeed")){
+		var feed = new Instafeed({
+			accessToken: igToken,
+			limit:12,
+			transform: function(item) {
+				var d = new Date(item.timestamp);
+				item.date = d.toLocaleString('default', { day:"numeric", month: 'long', year:"numeric" });
+				item.caption=item.caption ?    item.caption.substring(0,100)+"..." : ""
+				return item;
+			},
+			"template":`
+<div class="instaImageItem">
+<a href="{{link}}" title="Instagram Sayfamız" target="_blank" rel="nofollow" class="aspect-box d-block" >
+			<img src="{{image}}" alt="Instagram Sayfamız">
+			<span class="btn">Görüntüle</span>
+</a>
+</div>
+`
+});
+feed.run();
+}
+}
+
+
+</script>
+<style>
+  #instafeed{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.instaImageItem {
+    position: relative;
+    --aspect-ratio: 1;
+}
+
+.instaImageItem a span{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: var(--main);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1em;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0;
+    backdrop-filter: contrast(0);
+    -webkit-backdrop-filter: contrast(0);
+    transition: all .5s ease;
+}
+
+.instaImageItem:hover a span{
+        letter-spacing: 4px;
+        opacity: .5;
+}
+
+@media (max-width: 767px){
+    #instafeed{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+</style>
+```
+
+
+
+
+
