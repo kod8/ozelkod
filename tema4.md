@@ -64,6 +64,14 @@ body{
 }
 ```
 
+## İçeriğe Video ekleme
+```
+ <video width="100%" height="auto" controls poster="https://cdn.kod8.in/POSTERURL">
+  <source src="https://cdn.kod8.in/VIDEOURL" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+```
+
 ## Instagram bölümü ekleme
 ```html
 	<script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
