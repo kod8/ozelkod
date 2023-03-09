@@ -65,7 +65,7 @@ body{
 ```
 
 ## İçeriğe Video ekleme
-```
+```html
  <video width="100%" height="auto" controls poster="https://cdn.kod8.in/POSTERURL">
   <source src="https://cdn.kod8.in/VIDEOURL" type="video/mp4">
 Your browser does not support the video tag.
