@@ -190,6 +190,35 @@ feed.run();
 
 ```
 
+## Footer Üzerine Bant (Sponsorluk bandı)
+```html
+<a href="https://kod8.net" title="Kod8 ve Serbay Sponsorluğunda" target="_blank" class="sponsorluk">  
+  Web sitemiz 
+  <img class=" lazy" src="https://static.kod8.net/img/ph.png" data-src="https://static.kod8.net/img/tayyarelimani/sirketlogolari/kod8/kod8.png" alt="Serbay ve kod8 Sponsorluğunda" />
+sponsorluğunda hazırlanmıştır.
+</a>
+
+<style>
+  .sponsorluk{
+    order:2;
+    color: gray;
+    font-size: 2em;
+    font-weight: 100;
+    background: rgb(245,245,245);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0;
+}
+.sponsorluk img{width:150px;}
+@media only screen and (max-width: 600px) {
+    .sponsorluk{font-size: 1em;padding: 2em 0;font-weight: 400;}
+    .sponsorluk img{width:75px;}
+}
+  .footer {margin-top: 0!important;order: 2;}
+</style>
+```
+
 
 ## Stillendirilmiş Blok Örnekleri
 ### Anavitrin yapılan sayfanın alt sayfaları için kart stili 1
