@@ -275,3 +275,11 @@ sponsorluğunda hazırlanmıştır.
 }
 ```
 
+## Scrit ve Diğer Düzenlemeler
+### Ürün Galeriside Slider En Boy Oranını Değiştirme
+```js
+AddOnLoadEvent(function(){
+	mainProductSlider.options.heightRatio="1"
+	mainProductSlider.refresh()
+})
+    ```
