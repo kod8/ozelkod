@@ -67,6 +67,31 @@ document.querySelector(".fixedButtons").appendChild(telefonButton)
 })
 </script>
 ```
+
+## Açılır Mesaj Yazılabilir Whatsapp Butonu
+```html
+<!-- Floating Whatsapp Button -->
+<div id="WAButton"></div>
+
+<link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
+<script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('#WAButton').floatingWhatsApp({
+        phone: '+'+document.querySelector(".whatsappButton").href.split("phone=")[1].split("&")[0], 
+        headerTitle: 'Bize WhatsApptan Yazın!',
+        popupMessage: 'Merhaba, size nasıl yardımcı olabilirim?', 
+        showPopup: true,
+        buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />',
+        position: "right",
+        zIndex: 99,
+        autoOpenTimeout:3000
+    });
+});
+</script>
+```
+
+
 ## Instagram bloğu ekleme
 ```html
 <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
