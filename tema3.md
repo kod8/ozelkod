@@ -196,15 +196,14 @@ feed.run();
 ## Anavitrin alt sayfaları kart stili (dikey)
 ```css
 
-  /*Anavitrin alt sayfalar stili*/
-.anaVitrinler .anaVitrinItem .altSayfalar {
-    align-items:unset;
-}
-
+ 
+   /*Anavitrin alt sayfalar stili*/
+.anaVitrinler .anaVitrinItem .altSayfalar {align-items:unset;}
 .anaVitrinler .anaVitrinItem .altSayfalar .altSayfa {
     padding-right: 0;
-    border-radius: 1.5em;
-    margin-bottom:2em
+    border-radius: 0;
+    margin-bottom:2em;
+    background: var(--darker)
 }
     
 .anaVitrinler .anaVitrinItem .altSayfalar a {
@@ -231,7 +230,7 @@ feed.run();
 .anaVitrinler .anaVitrinItem .altSayfalar a img {
     width: 90%;
     height: auto;
-    border-radius: 1em;
+    border-radius: 0;
     margin: -2em 1em 2em 5%;
     transition:all 300ms ease;
 }
@@ -242,43 +241,59 @@ feed.run();
 }
 
 .anaVitrinler .anaVitrinItem .altSayfalar a div .baslik {
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: 800;
+    text-align: center;
+    display: block;
 }
 
-    .anaVitrinler .anaVitrinItem .altSayfalar a .spot {
+  .anaVitrinler .anaVitrinItem .altSayfalar a .spot {
     display: block;
     width: 100%;
-    font-size: 1.2em;
-        margin: 0;
-        text-align: center;
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-weight: 200;
 }
 
 @media only screen and (max-width: 600px) {
-.anaVitrinler .anaVitrinItem .altSayfalar a .spot {
-    display: none;
-}
-    
-    .anaVitrinler .anaVitrinItem .altSayfalar a img {
+.anaVitrinler .anaVitrinItem .altSayfalar a .spot {display: none;}
+.anaVitrinler .anaVitrinItem .altSayfalar a img {
     width: 100%;
     border-radius: 0;
     margin: 0;
 }
 
 .anaVitrinler .anaVitrinItem .altSayfalar .altSayfa:hover img {
-        margin: 0;
+    margin: 0;
     width: 100%;
 }
-    
-    .anaVitrinler .anaVitrinItem .altSayfalar .altSayfa {
-    overflow: :hidden;
+  .anaVitrinler .anaVitrinItem .altSayfalar i {
+    margin-left: 0;
+    margin-top: .5em;
 }
+.anaVitrinler .anaVitrinItem .altSayfalar .altSayfa {overflow: :hidden;}
   .anaVitrinler .anaVitrinItem .altSayfalar .altSayfa {flex: 0 1 100%;} 
 }
-  /*/ anavitrin alt sayfalar stili*/
+/*/ anavitrin alt sayfalar stili*/
+</style>
 ```
 
-
+## Ana Sayfa Çözüm Ortakları Sliderı bozup Grid Yapma
+```html
+<!--Çözüm Ortakları Sliderı Grid Yapma -->
+<script>
+    setTimeout(function(){
+      
+     $('.cozumortaklari .owl-carousel').trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+  },1000) 
+  </script>
+<style>
+ .cozumortaklari .owl-stage-outer{display: grid;grid-template-columns: repeat(auto-fill,minmax(170px,1fr));margin-top: 1em;}
+.cozumortaklari .owl-stage-outer > div{border: 1px solid #eeeeee;padding: 1em;}
+</style>
+```
 
 
 
