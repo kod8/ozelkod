@@ -204,10 +204,8 @@ feed.run();
     background: var(--darker)
 }
     
-.anaVitrinler .anaVitrinItem .altSayfalar a {
-    flex-direction: column;
-} 
-
+.anaVitrinler .anaVitrinItem .altSayfalar a {flex-direction: column;} 
+.anaVitrinler .anaVitrinItem .altSayfalar a:hover{color:white;}
 .anaVitrinler .anaVitrinItem .altSayfalar i {
     flex-grow:2; 
     order: 1;
