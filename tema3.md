@@ -195,9 +195,7 @@ feed.run();
 
 ## Anavitrin alt sayfaları kart stili (dikey)
 ```css
-
- 
-   /*Anavitrin alt sayfalar stili*/
+/*Anavitrin alt sayfalar stili*/
 .anaVitrinler .anaVitrinItem .altSayfalar {align-items:unset;}
 .anaVitrinler .anaVitrinItem .altSayfalar .altSayfa {
     padding-right: 0;
@@ -277,7 +275,6 @@ feed.run();
   .anaVitrinler .anaVitrinItem .altSayfalar .altSayfa {flex: 0 1 100%;} 
 }
 /*/ anavitrin alt sayfalar stili*/
-</style>
 ```
 
 ## Ana Sayfa Çözüm Ortakları Sliderı bozup Grid Yapma
