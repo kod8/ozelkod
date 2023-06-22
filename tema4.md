@@ -283,3 +283,18 @@ AddOnLoadEvent(function(){
 	mainProductSlider.refresh()
 })
 ```
+
+## Ana Sayfa Çözüm Ortakları Sliderı bozup Grid Yapma
+```html
+<!--Çözüm Ortakları Sliderı Grid Yapma -->
+<script>
+    setTimeout(function(){
+     $('.cozumortaklari .owl-carousel').trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+  },1000) 
+  </script>
+<style>
+ .cozumortaklari .carousel{display: grid;grid-template-columns: repeat(auto-fill,minmax(170px,1fr));margin-top: 1em;}
+.cozumortaklari .carousel > .client{border: 1px solid #eeeeee;padding: 1em;}
+</style>
+```
+
