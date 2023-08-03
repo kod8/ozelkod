@@ -291,4 +291,52 @@ feed.run();
 ```
 
 
+## Kartlardaki gradyanı kaldırma
+```css
+
+/*Kartlardaki gradyanı kaldır*/
+.departments-box-layout5{height: calc(100% - 1em);}
+
+.departments-box-layout5 .item-img{
+   display: flex;
+    flex-direction: column;
+    background:var(--dark);
+    height: 100%;
+}
+
+
+.departments-box-layout5 .item-img img{border-radius: 0;height: auto;object-fit: contain}
+.departments-box-layout5 .item-img:before{content: unset;}
+
+
+.departments-box-layout5 .item-img .item-content {
+    position: initial;
+    width: 100%;
+    padding: 1em 2em;
+    background: var(--dark);
+}
+
+.departments-box-layout5 .item-img .item-content .item-btn {
+   visibility: visible;
+    opacity: 1;
+    border-radius: 0;
+}
+
+.departments-box-layout5:hover  {
+    transform:perspective(1200px) scale(1) rotateY(0deg) rotateX(5deg) translate3d(0,0, -50px);
+    box-shadow: unset;
+}
+
+.departments-box-layout5:hover .item-content {transform:unset;}
+
+.departments-box-layout5 .item-img .item-content p {
+    opacity: .8;
+    visibility: visible;
+}
+/*/Kartlardaki gradyanı kaldır*/
+```
+
+
+
+
 
