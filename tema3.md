@@ -20,6 +20,37 @@ body {
 }
 
 ```
+## Koyu Header Stili
+```css
+
+/*Koyu Header stili*/
+.template-main-menu nav > ul > li > a,.template-main-menu nav > ul > li ul.dropdown-menu-col-1 li a {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+header:not(.menu-sticky) .header-menu-layout1 {background: var(--dark);}
+header:not(.menu-sticky) .header-top-bar  {background: var(--main);
+border-bottom:  1px solid var(--dark);
+}
+
+header:not(.menu-sticky) .temp-logo .dark {
+display: block!important;
+}
+
+
+header:not(.menu-sticky) .temp-logo .light {
+display: none!important;
+}
+.template-main-menu nav a{font-weight: 800!important}
+
+header:not(.menu-sticky) .template-main-menu nav .dropdown-menu-col-1 li{background: var(--dark);}
+header:not(.menu-sticky) .template-main-menu nav .dropdown-menu-col-1 li a:hover{background: var(--main)!important;}
+header:not(.menu-sticky) .template-main-menu nav > ul > li a{color: white!important;}
+header.menu-sticky .template-main-menu nav > ul > li{border-right: 1px solid var(--light);}
+header.menu-sticky .template-main-menu nav > ul > li:first-child{border-left: 1px solid var(--light);}
+/*/Koyu Header stili*/
+```
 
 
 ## Telefonla ara butonu ekleme(Sol alt sabit ikonlar)
