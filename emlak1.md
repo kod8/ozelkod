@@ -232,4 +232,56 @@ feed.run();
 </style>
 ```
 
+## Sayfa Detay İki sütunlu layout
+```css
+
+/*Proje Sayfalar detay fix*/ 
+@media (min-width:960px){
+[data-kategori*="Projelerimiz"]  ~ .detay .blog-detail > .blog-post {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: minmax(0, min-content) 1fr minmax(0, min-content) minmax(0, auto);
+    column-gap: 2em;
+}
+
+[data-kategori*="Projelerimiz"]  ~ .detay .blog-detail > .blog-post > .blog-post-image{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+[data-kategori*="Projelerimiz"]  ~ .detay .blog-detail > .blog-post > .blog-post-title{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+[data-kategori*="Projelerimiz"]  ~ .detay .blog-detail > .blog-post > .blog-post-content{
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+}
+
+[data-kategori*="Projelerimiz"]  ~ .detay .blog-detail > .blog-post > .galeri{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    align-self: end;
+    
+}
+    
+    [data-kategori*="Projelerimiz"]  ~ .detay .blog-detail > .blog-post > .altsayfalar{
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    align-self: end;
+    
+}
+    
+[data-kategori*="Projelerimiz"]  ~ .detay .blog-detail > .blog-post > .galeri img{
+    width: 100%;
+    height: 135px!important;
+    object-fit: cover;
+}
+
+
+}
+
+```
+
 
