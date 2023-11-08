@@ -218,7 +218,100 @@ sponsorluğunda hazırlanmıştır.
   .footer {margin-top: 0!important;order: 2;}
 </style>
 ```
+## Footer Üzerine İletişim için bant
+```html
+<!--Call banner-->
 
+<div class="callBanner" title="İletişime Geç">
+  <div class="left">
+    <div class="title">İletişime <span>Geç</span></div>
+        <div class="subtitle">Daha detaylı bilgi ve teklif almak için bizimle her an iletişime geçebilirsiniz.</div>
+
+    <span class="phone" title="İletişime Geç"></span>
+    <a href="https://www.tabeladostu.com/iletisim" title="İletişim" class="navbar__action-btn navbar__action-btn-reserve btn btn__primary m-0">İletişim Formu</a>
+  </div>
+  <img src="https://cdn.kod8.in/1135/9817-7112023-165159.jpg" alt="İletişime Geç">
+</div>
+
+<script>
+AddOnLoadEvent(function(){
+  var callBanner=document.querySelector(".callBanner");
+var targetLinks=callBanner.querySelectorAll(".callBanner .phone");
+var phoneNumber=document.querySelector(`footer .contact-box a[href^="tel"]`).innerText;
+var phoneNumberLink=document.querySelector(`footer .contact-box a[href^="tel"]`).href;
+  callBanner.href=phoneNumberLink;
+  
+  targetLinks.forEach(function(link){
+    link.innerText=phoneNumber
+    link.href=phoneNumberLink;
+  })
+})  
+</script>
+
+<style>
+  .footer{order:2}
+  .anasayfa {
+    display: flex;
+    flex-direction: column;
+}
+  .callBanner{
+    order:2;
+    --height:400px;
+    height: var(--height);
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom: -45px;
+    overflow: hidden;
+    position: relative;
+}
+
+.callBanner .left{
+    padding-left: 2em;
+    font-size: 2em;
+    text-align: left
+}
+
+.callBanner .title{
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:var(--main)
+}
+
+.callBanner .title span{color:var(--dark)}
+
+.callBanner .phone{
+    color:var(--dark);
+    font-size: 1.7em;
+    font-weight: 800;
+  display:block;
+}
+
+.callBanner > img{
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+@media only screen and (max-width: 640px){
+    .callBanner{
+        font-size: .65em;
+    --height: 200px;
+    }
+  
+   .callBanner img{
+      width: 100%;
+    object-fit: cover;
+    opacity: .2;
+    }
+
+}
+
+</style>
+<!--Call banner-->
+```
 
 ## Stillendirilmiş Blok Örnekleri
 ### Anavitrin yapılan sayfanın alt sayfaları için kart stili 1
