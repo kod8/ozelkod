@@ -305,6 +305,95 @@ feed.run();
 }
 /*/ anavitrin alt sayfalar stili*/
 ```
+## Anavitrin alt sayfalar yazısız stili (Neden biz)
+```css
+
+/*Yazısız Alt Sayfalar Anasayfa Anavitrin*/
+  @media (min-width:1024px){
+
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]:before,
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]:after  {
+   
+  background: var(--bg);
+    content: "";
+    width:calc(49.5vw - 50%);
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+}
+
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]:before  {left: 100%;}
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]:after  {right: 100%;}
+    .anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar .altSayfa  .spot{
+display: block;
+    color: white;
+    opacity: .75;
+        font-size: 1em;
+}
+    
+}
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  {
+    --bg:var(--dark);
+    background: var(--bg);
+    padding: 1em;
+}
+
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"] > .resim,
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"] > .detay
+{flex-basis: 100%;order: 0!important;margin: 0!important;padding: 0!important;}
+
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"] > .resim .baslik{text-transform: uppercase;font-weight: 800;width: 100%;background: transparent;position: unset}
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"] > .detay .spot{font-weight: 100;font-style: italic;color: var(--darker);text-align: center;width: 100%;margin: 0;
+padding: 0;}
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"] > .detay .btn{display: none;}
+
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"] > .resim img,
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar .altSayfa i  
+{display: none;}
+
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar {
+    margin: 0!important;
+    gap: 1em;
+    padding: 0;
+   padding-top: 1em;
+   align-items: stretch;
+}
+
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar .altSayfa  {
+	flex: 0 1 calc(50% - .5em);
+  	background: #00000030;
+    padding: 1em;
+    margin: 0;
+    text-align: center;
+  	position:relative;
+}
+
+  
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar {counter-reset: fayda;}
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar .altSayfa{position: relative;}
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar .altSayfa:before {
+   	counter-increment: fayda;
+  	content: counter(fayda);
+    font-weight: 800;
+    font-size: 3em;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    line-height: 1;
+    color: var(--dark)
+}
+  
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar .altSayfa  .image{display: none;}
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar .altSayfa .baslik{
+	color: var(--main);
+    font-size: 1.5em;
+    font-family: var(--font2);  
+}
+
+/*/Yazısız Alt Sayfalar Anasayfa Anavitrin*/
+
+```
 
 ## Ana Sayfa Çözüm Ortakları Sliderı bozup Grid Yapma
 ```html
