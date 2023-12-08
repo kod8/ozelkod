@@ -368,6 +368,58 @@ var phoneNumberLink=document.querySelector(`footer .contact-box a[href^="tel"]`)
 }
 ```
 
+### Ana vitrin alt sayfalar stili (Resimsiz/neden biz vs )
+```css
+/*Resimsiz Anasayfa Anavitrin*/
+@media (min-width:1024px){
+
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]:before,
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]:after  {
+  background: var(--darker);
+    content: "";
+    width:calc(49.5vw - 50%);
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+}
+
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]:before  {left: 100%;}
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]:after  {right: 100%;}
+    .anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar .altSayfa  .spot{
+    display: block;
+    color: white;
+    opacity: .5
+}
+    
+}
+
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  {background: var(--darker);padding: 1em;}
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"] > .resim  {display: none;}
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"] > .detay  {flex: 1 1 100%;margin: 0;}
+
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar {
+    margin: 0!important;
+    gap: 1em;
+    padding: 0;
+    padding-top: 1em;
+    align-items: stretch;
+}
+
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar .altSayfa  {
+    flex: 0 1 calc(50% - .5em);
+    background: var(--darker);
+    padding: 1em;
+    margin: 0;
+    border: 1px solid var(--dark);
+}
+
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar .altSayfa  .image{display: none;}
+.anaVitrinler .anaVitrinItem[data-vitrin-sayfa-baslik="Sayfa Başlığı"]  .altSayfalar .altSayfa  .baslik{color: white;font-size: 1.2em;font-family: var(--font2);}
+/*/Resimsiz Anasayfa Anavitrin*/
+
+```
+
 ## Script ve Diğer Düzenlemeler
 ### Ürün Galeriside Slider En Boy Oranını Değiştirme
 ```js
