@@ -420,6 +420,34 @@ var phoneNumberLink=document.querySelector(`footer .contact-box a[href^="tel"]`)
 
 ```
 
+### Slider detay yazısı stili
+```css
+
+/*Slider*/
+.k8Slider .sliderDetay {background: var(--dark)!important;padding: 50px;line-height: 1.2;opacity: 0;top: 33%;}
+.k8Slider .imagewithCaption .resim:before {content: unset;}
+.k8Slider .sliderDetay .baslik {display: flex;flex-direction: column;text-transform: uppercase;font-weight: 200;}
+.k8Slider .sliderDetay .baslik b {font-weight: 800;}
+.k8Slider .sliderDetay .aciklama {font-size: 1.75em;line-height: 1.5;font-weight: 400;opacity: .75;border-top: 1px solid var(--light);padding-top:.5em;}
+
+.k8Slider .sliderDetay:before {
+    content: "";
+    position: absolute;
+    inset: -1em;
+    z-index: -1;
+    background: var(--light);
+    clip-path: polygon(0 60.00px,60.00px 0,100% 0,100% 100%,0 100%,0 60.00px,2px  calc(60.00px + 2px),2px calc(100% - 2px),calc(100% - 2px) calc(100% - 2px),calc(100% - 2px) 2px,calc(60.00px + 2px) 2px,2px calc(60.00px + 2px));
+}
+
+
+.k8Slider .is-visible .sliderDetay {-webkit-animation:slide-in-right .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-right .5s cubic-bezier(.25,.46,.45,.94) both}
+
+.k8Slider .is-visible .baslik {-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both}
+.k8Slider .is-visible .aciklama {-webkit-animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) 1s both;animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) .25s both}
+@-webkit-keyframes slide-in-right{0%{-webkit-transform:translateX(1000px);transform:translateX(1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes slide-in-right{0%{-webkit-transform:translateX(1000px);transform:translateX(1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
+@-webkit-keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-bottom{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+
+```
 ## Script ve Diğer Düzenlemeler
 ### Ürün Galeriside Slider En Boy Oranını Değiştirme
 ```js
