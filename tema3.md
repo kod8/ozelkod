@@ -99,6 +99,21 @@ document.querySelector(".fixedButtons").appendChild(telefonButton)
 </script>
 ```
 
+## Ürünleri Alfabetik Sıralama
+```js
+/*Alfabetik ürün sıralama*/
+/*Ana vitrin alfabetik sıralama*/
+AddOnLoadEvent(function () {
+[...document.querySelectorAll(".oneCikanUrunler .oneCikanUrun")].sort(function(a , b) {
+return a.querySelector(".baslik").textContent.localeCompare(b.querySelector(".baslik").textContent, 'tr')
+}).forEach(function(urun,index){urun.style.order=index});
+    
+[...document.querySelectorAll(".urunler .urun")].sort(function(a , b) {
+  return a.querySelector(".item-title").textContent.localeCompare(b.querySelector(".item-title").textContent, 'tr');
+}).forEach(function(urun,index){urun.style.order=index});
+    })
+```
+
 ## Açılır Mesaj Yazılabilir Whatsapp Butonu
 ```html
 <!-- Floating Whatsapp Button -->
