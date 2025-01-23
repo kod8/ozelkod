@@ -471,3 +471,63 @@ AddOnLoadEvent(function(){
 </style>
 ```
 
+
+## Rakamları animasyonlu saydırma
+```js
+ // Sayıların başlangıç ve bitiş değerlerini tanımlayın
+const numbers = [...document.querySelectorAll('.rakam')].map(function(rakam){return { element: rakam, start: 0, duration: 4000 }})
+
+// Sayıların bitiş değerlerini metinden dinamik olarak al
+function extractNumberFromText(element) {
+  const textContent = element.textContent; 
+  const numberMatch = textContent.match(/\d+/); // Sayıyı metinden çıkart
+  return numberMatch ? parseInt(numberMatch[0], 10) : 0; // Sayıyı döndür
+}
+
+// Sayıları artırma fonksiyonu
+function animateNumber(element, start, end, duration) {
+  let startTime = null;
+
+  function incrementNumber(timestamp) {
+    if (!startTime) startTime = timestamp;
+    let progress = timestamp - startTime;
+    let current = Math.min(start + (progress / duration) * (end - start), end);
+    element.innerText = Math.floor(current);
+
+    if (current < end) {
+      requestAnimationFrame(incrementNumber);
+    }
+  }
+
+  requestAnimationFrame(incrementNumber);
+}
+
+// Intersection Observer ile animasyon başlatma
+const observerOptions = {
+  root: null, // Varsayılan olarak viewport
+  threshold: 0.1, // %10'u görünür olduğunda tetikle
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const element = entry.target;
+      const numberItem = numbers.find(item => item.element === element);
+      if (numberItem) {
+        const endValue = extractNumberFromText(numberItem.element); // Yazıdan sayıyı çıkar
+        animateNumber(numberItem.element, numberItem.start, endValue, numberItem.duration);
+        observer.unobserve(numberItem.element); // Bir kere tetiklendikten sonra gözlemlemeyi bırak
+      }
+    }
+  });
+}, observerOptions);
+
+// Her sayı elemanını gözlemle
+numbers.forEach(item => {
+  observer.observe(item.element);
+});
+  
+```
+
+
+
